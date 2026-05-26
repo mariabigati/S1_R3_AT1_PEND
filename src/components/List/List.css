@@ -1,0 +1,40 @@
+.list-container {
+    position: relative;
+    min-height: 355px;
+    height: 100%;
+    width: 250px;
+    background-image: repeating-linear-gradient(#fff 0 20px, rgb(232, 215, 255) 20px 21px);
+    border: 1px solid rgb(255, 0, 0);
+    box-shadow: 5px 5px rgb(255, 45, 45);
+}
+
+.list-container::before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    width: 1px;
+    height: 100%;
+    background-color: rgb(255, 105, 105);
+
+}
+
+.list {
+    list-style: none;
+}
+
+.list-item {
+    font-size: 16px;
+    color: rgb(30, 30, 202);
+    margin: 5px;
+}
+
+.list-item-remove-btn {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: rgb(30, 30, 202);
+}
+
+.list-item-remove-btn:hover {
+    cursor: pointer;
+    color: red;
+}

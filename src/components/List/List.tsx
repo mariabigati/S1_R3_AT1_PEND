@@ -1,3 +1,5 @@
+import "./List.css"
+
 import type { Product } from "../../interfaces/product";
 
 interface ListProps {
@@ -7,12 +9,12 @@ interface ListProps {
 
 export function List({ items, onRemoveItem }: ListProps) {
   return (
-    <div>
-      <ul>
+    <div className={"list-container"}>
+      <ul className={"list"}>
         {items.map((item) => (
-          <li key={item.id}>
-            {item.name} {item.quantity}
-            <button onClick={() => onRemoveItem(item.id)}>Excluir</button>
+          <li key={item.id} className={"list-item"}>
+            {item.name} - {item.quantity}
+            <button className={"list-item-remove-btn"} onClick={() => onRemoveItem(item.id)}>X</button>
           </li>
         ))}
       </ul>

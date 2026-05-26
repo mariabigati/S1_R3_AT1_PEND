@@ -1,3 +1,5 @@
+import "./ListForm.css"
+
 export function ListForm({
   useStateName,
   onChangeName,
@@ -6,26 +8,26 @@ export function ListForm({
   onAddItem,
 }) {
   return (
-    <div>
-      <div className="product-list-form">
-        <form>
-          <input
+        <form className="product-list-form">
+          <label>Nome</label>
+          <input className={"product-list-form-input"}
             name="product-name"
+            id="product-name"
             value={useStateName}
             type="text"
             onChange={onChangeName}
           />
-          <input
+          <label>Quantidade</label>
+          <input className={"product-list-form-input"}
             name="product-qnt"
+            id="product-qnt"
             value={useStateQnt}
             type="number"
             onChange={onChangeQnt}
           />
-          <button type="submit" onClick={onAddItem}>
-            Adicionar
+          <button type="submit" className={"product-list-form-submit"} onClick={onAddItem}>
+            +
           </button>
         </form>
-      </div>
-    </div>
   );
 }
